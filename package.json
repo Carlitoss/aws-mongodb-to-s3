@@ -1,0 +1,22 @@
+{
+  "name": "aws-mongodb-to-s3",
+  "version": "1.0.0",
+  "description": "Tool to run MongoDB backups in AWS S3 Buckets",
+  "main": "index.js",
+  "keywords": [
+    "aws",
+    "amazon",
+    "s3"
+  ],
+  "scripts": {
+    "build": "zip -r -X bundle.zip node_modules index.js package.json"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.2.46",
+    "fs": "0.0.2",
+    "mongodb-backup": "^1.6.0",
+    "tar-fs": "^1.13.0",
+    "dotenv": "^4.0.0"
+  },
+  "author": "Carlos Escura"
+}
