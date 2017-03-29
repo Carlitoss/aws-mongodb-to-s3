@@ -62,10 +62,10 @@ var uploadToAwsS3 = function (s3bucket) {
   bucket.putObject({
     Key: 'db-backups/' + filename,
     Body: fs.createReadStream(tempDir + '/' + filename),
-    ServerSideEncryption: 'AES256', // AES256 Server Side Encryption
+    ServerSideEncryption: 'AES256'
   }, function (err, data) {
     // Clean up the temporary directory
-    // cleanUpTempDir();
+    cleanUpTempDir();
 
     if (err) {
       console.log(err, "error in uploading the backup file to S3 bucket");
